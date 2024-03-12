@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Intentional error: trying to execute a non-existent script
-                    sh './output.sh'
+                    sh './non_existent_script.sh'
                 }
             }
         }
@@ -32,6 +32,6 @@ pipeline {
         always {
             // Display 'pipeline failed' in case of any errors within the pipeline
             echo 'Pipeline failed'
-        }
-    }
+        }
+    }
 }
